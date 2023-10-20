@@ -15,21 +15,30 @@ like JavaScript comments 😂 */
 //     return 0;
 // }
 
+// int main(){
+//     int current_year = 2023;
+//     int birth_year, year_of_birth;
+//     int everything_password = 1234;
+//     int ig_pass, tiktok_pass, twitter_pass;
+//     ig_pass = tiktok_pass = twitter_pass = everything_password;
+
+//     printf("Please enter your year of birth: ");
+//     scanf("%d", &birth_year);
+//     year_of_birth = birth_year;
+
+//     printf("You will be %d years old by the end of the year\n", current_year - birth_year);
+//     printf("%i baby\n", year_of_birth);
+
+//     printf("POV you're a millenian; Your IG password - %d", tiktok_pass);
+
+//     return 0;
+// }
+
+
 int main(){
-    int current_year = 2023;
-    int birth_year, year_of_birth;
-    int everything_password = 1234;
-    int ig_pass, tiktok_pass, twitter_pass;
-    ig_pass = tiktok_pass = twitter_pass = everything_password;
+    float pie = (float) 22 / 7;
 
-    printf("Please enter your year of birth: ");
-    scanf("%d", &birth_year);
-    year_of_birth = birth_year;
-
-    printf("You will be %d years old by the end of the year\n", current_year - birth_year);
-    printf("%i baby\n", year_of_birth);
-
-    printf("POV you're a millenian; Your IG password - %d", tiktok_pass);
+    printf("Pi is equal to %.3lf", pie);
 
     return 0;
 }

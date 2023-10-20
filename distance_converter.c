@@ -13,7 +13,7 @@ int main(){
     kms = miles * 1.609;
     printf("\tConverting...\n");
 
-    printf("\n%f kilometres", kms);
+    printf("\n%.3f kilometres", kms); // Prints the answer to 2 decimal places
 
     return 0;
 }
