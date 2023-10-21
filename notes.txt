@@ -13,3 +13,9 @@ string - %s
 Type Conversion
 
 - This is changing from one data type to another. It can be implicit or automatic e.g when you declare an int data type but provide a float value (the float val is automatically converted to an integer). Explicit you specify the data type you want it to be my specifying it in parentheses
+
+Operators; arithmetic, assignment, bitwise, comparison, logical
+
+increment operator can be used before or after the variable 
+
+^ (X0R), << (left shift), >> (right shift), & (and), | (or)

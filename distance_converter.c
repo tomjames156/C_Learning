@@ -4,14 +4,14 @@
 
 int main(){
 
-    int miles;
+    float miles;
     float kms;
 
     printf("Enter a distance in miles to convert it to kilometres: ");
-    scanf("%d", &miles);
+    scanf("%f", &miles);
 
     kms = miles * 1.609;
-    printf("\tConverting...\n");
+    printf("\t...Converting...");
 
     printf("\n%.3f kilometres", kms); // Prints the answer to 2 decimal places
 

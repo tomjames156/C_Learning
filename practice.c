@@ -23,12 +23,20 @@ like JavaScript comments 😂 */
 // }
 
 
+// int main(){
+//     const int NUMERATOR = 22;
+//     const int DENOMINATOR = 7;
+//     float pie = (float) NUMERATOR / DENOMINATOR;
+
+//     printf("Pi is equal to %.5f", pie);
+
+//     return 0;
+// }
+
 int main(){
-    const int NUMERATOR = 22;
-    const int DENOMINATOR = 7;
-    float pie = (float) NUMERATOR / DENOMINATOR;
+    int myAge = 2022 - 2004;
+    myAge++;
 
-    printf("Pi is equal to %.5f", pie);
-
+    printf("I am %d years old", myAge);
     return 0;
 }
