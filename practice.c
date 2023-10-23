@@ -33,10 +33,41 @@ like JavaScript comments 😂 */
 //     return 0;
 // }
 
-int main(){
-    int myAge = 2022 - 2004;
-    myAge++;
+// int main(){
+//     // int myAge = 2022 - 2004;
+//     // myAge++;
 
-    printf("I am %d years old", myAge);
+//     // printf("I am %d years old", myAge);
+//     // return 0;
+    
+//     for(int i = 1; i <= 5; i++){
+//         printf("%d\n", i);
+//     }
+//     printf("\n");
+//     int score = 55;
+//     score >= 60 ? puts("Passed\n"): printf("Failed.\nYou must take this course again");
+
+//     puts("Yeahhhh");
+//     return 0;
+// }
+
+int main(){
+
+    int total = 0;
+    float average;
+    int grade = 0;
+    int count = 0;
+
+    while(grade != -1){
+        printf("Enter score: \n");
+        scanf("%d", &grade);
+        total += grade;
+        count += 1;
+    }
+
+    average = (float) total / count;
+
+
+    printf("Total: %d\nAverage = %.2f", total, average);
     return 0;
 }
