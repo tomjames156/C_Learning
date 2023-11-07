@@ -158,28 +158,47 @@ like JavaScript comments 😂 */
 // }
 
 int main(){
-    int bday;
-    bool correct = false;
+    int age;
 
-    while(!correct){
-        printf("When is my birthday\n=> ");
-        scanf("%i", &bday);
+    printf("How old are you?\n=> ");
+    scanf("%d", &age);
 
-        if(bday == 28){
-            correct = true;
-            printf("%d\n", correct);
-            printf("Yup, that's right March 28th");
-        }else if(bday < 28){
-            printf("%d\n", correct);
-            printf("Wrong! Too low! Try again.\n");
-            continue;
-        }else if(bday > 28){
-            printf("%d\n", correct);
-            printf("Wrong! Too high! Try again.\n");
-            continue;
-        }
+    printf("%d\n", age >= 18);
+
+    if(age == 18){
+        printf("Alright, alright, you can now vote");
+    }else if(age > 18){
+        printf("Please vote. You're older than enough");
+    }else{
+        printf("Try again when you're in %d years\n", 18 - age);
     }
 
-    printf("\n");
     return 0;
 }
+
+// int main(){
+//     int bday;
+//     bool correct = false;
+
+//     while(!correct){
+//         printf("When is my birthday\n=> ");
+//         scanf("%i", &bday);
+
+//         if(bday == 28){
+//             correct = true;
+//             printf("%d\n", correct);
+//             printf("Yup, that's right March 28th");
+//         }else if(bday < 28){
+//             printf("%d\n", correct);
+//             printf("Wrong! Too low! Try again.\n");
+//             continue;
+//         }else if(bday > 28){
+//             printf("%d\n", correct);
+//             printf("Wrong! Too high! Try again.\n");
+//             continue;
+//         }
+//     }
+
+//     printf("\n");
+//     return 0;
+// }
