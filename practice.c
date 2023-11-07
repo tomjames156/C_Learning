@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 /* Comments in C are basically 
 like JavaScript comments 😂 */
@@ -146,12 +147,39 @@ like JavaScript comments 😂 */
 // }
 
 
+// int main(){
+//     int TEST_AGE = 30;
+
+//     TEST_AGE = 40;
+
+//     printf("%d", TEST_AGE);
+
+//     return 0;
+// }
+
 int main(){
-    int TEST_AGE = 30;
+    int bday;
+    bool correct = false;
 
-    TEST_AGE = 40;
+    while(!correct){
+        printf("When is my birthday\n=> ");
+        scanf("%i", &bday);
 
-    printf("%d", TEST_AGE);
+        if(bday == 28){
+            correct = true;
+            printf("%d\n", correct);
+            printf("Yup, that's right March 28th");
+        }else if(bday < 28){
+            printf("%d\n", correct);
+            printf("Wrong! Too low! Try again.\n");
+            continue;
+        }else if(bday > 28){
+            printf("%d\n", correct);
+            printf("Wrong! Too high! Try again.\n");
+            continue;
+        }
+    }
 
+    printf("\n");
     return 0;
 }
