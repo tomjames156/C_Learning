@@ -157,24 +157,24 @@ like JavaScript comments 😂 */
 //     return 0;
 // }
 
-int main(){
-    int age;
+// int main(){
+//     int age;
 
-    printf("How old are you?\n=> ");
-    scanf("%d", &age);
+//     printf("How old are you?\n=> ");
+//     scanf("%d", &age);
 
-    printf("%d\n", age >= 18);
+//     printf("%d\n", age >= 18);
 
-    if(age == 18){
-        printf("Alright, alright, you can now vote");
-    }else if(age > 18){
-        printf("Please vote. You're older than enough");
-    }else{
-        printf("Try again when you're in %d years\n", 18 - age);
-    }
+//     if(age == 18){
+//         printf("Alright, alright, you can now vote");
+//     }else if(age > 18){
+//         printf("Please vote. You're older than enough");
+//     }else{
+//         printf("Try again when you're in %d years\n", 18 - age);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 // int main(){
 //     int bday;
@@ -202,3 +202,33 @@ int main(){
 //     printf("\n");
 //     return 0;
 // }
+
+int main(){
+    printf("Outfit Picker.\nDescribe how you're feeling and I'll recommend an outfit colour for you\n");
+    printf("Options are:\n1 - Moody\n2 - Sad\n3 - Happy\n4 - Angry\n5 - Relaxed\n\n=> ");
+    int todays_mood;
+    scanf("%d", &todays_mood);
+
+    switch(todays_mood){
+        case 1:
+            printf("PURPLE is great for when you feel a bit moody.");
+            break;
+        case 2:
+            printf("Go with GRAY for a sad boy/girl aesthetic.");
+            break;
+        case 3:
+            printf("Sparkle in WHITE for happiness but keep it clean.");
+            break;
+        case 4:
+            printf("Looks like you're going RED with anger");
+            break;
+        case 5:
+            printf("Be on with nature and relax in GREEN");
+            break;
+        default:
+            printf("You can never go wrong with all BLACK");
+            break;
+    }
+
+    return 0;
+}
