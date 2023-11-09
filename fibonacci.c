@@ -18,6 +18,22 @@ void fibonnaci(int first, int second, int len){
 
 
 int main(){
-    fibonnaci(2, 3, 8);
+
+    int first;
+    int second;
+    int len;
+
+    printf("FIBONACCI\n");
+    printf("Get a Fibonacci by giving me two numbers and the length of the series\n");
+    printf("Enter the first number\n=> ");
+    scanf("%d", &first);
+
+    printf("Enter the second number\n=> ");
+    scanf("%d", &second);
+
+    printf("Enter your desired length of the series\n=> ");
+    scanf("%d", &len);
+
+    fibonnaci(first, second, len);
     return 0;
 }
