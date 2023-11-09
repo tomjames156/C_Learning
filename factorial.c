@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int factorial(int num){
+    // Calculates the factorial of a number provided as an argument
     int i;
     int answer = 1;
     for(i = 1; i <= num; i++){
