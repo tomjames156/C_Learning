@@ -16,3 +16,6 @@ Arrays can also be created by declaring the array and the number of items and as
 Strings
 In c, a string is just an array of characters. It is declared using the same array syntax but the type is char and the value is the text in double quotes
 It can also be created by creating an actual array of chars with a terminating value at the end of it. The string similarly to arrays can be updated through indexing
+
+Function overloading
+Functions that have the same name but different return values. Not in C but in OOP
