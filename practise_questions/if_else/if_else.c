@@ -1,47 +1,47 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+// int main(){
 
-    float temp;
-    int operation;
-    float result;
+//     float temp;
+//     int operation;
+//     float result;
 
-    double root = 17 / sqrt(17);
+//     double root = 17 / sqrt(17);
 
-    if(root == sqrt(17)){
-        printf("Prime");
-    }
+//     if(root == sqrt(17)){
+//         printf("Prime");
+//     }
 
-    printf("%lf", root);
+//     printf("%lf", root);
 
-    printf("A program that converts Celsius to Farenheit and vice versa");
-    printf("\nEnter \"1\" to convert from Celsius to Farenheit or \"2\" to convert from Farenheit to Celsius and \"0\" to quit\n=> ");
-    scanf("%d", &operation);
+//     printf("A program that converts Celsius to Farenheit and vice versa");
+//     printf("\nEnter \"1\" to convert from Celsius to Farenheit or \"2\" to convert from Farenheit to Celsius and \"0\" to quit\n=> ");
+//     scanf("%d", &operation);
 
-    if(operation == 0){
-        return 0;
-    }
+//     if(operation == 0){
+//         return 0;
+//     }
 
-    switch(operation){
+//     switch(operation){
 
-        case 1:
-            printf("\nEnter a temperature in Celsius\n=> ");
-            scanf("%f", &temp);
-            result = (float) (temp * 9/5) + 32;
-            printf("\n%.2f degrees Farenheit", result);
-            break;
-        case 2:
-            printf("\nEnter a temperature in Farenheit\n=> ");
-            scanf("%f", &temp);
-            result = (float) (temp - 32) * 5/9;
-            printf("\n %.2f degrees Celsius", result);
-            break;
-    }
+//         case 1:
+//             printf("\nEnter a temperature in Celsius\n=> ");
+//             scanf("%f", &temp);
+//             result = (float) (temp * 9/5) + 32;
+//             printf("\n%.2f degrees Farenheit", result);
+//             break;
+//         case 2:
+//             printf("\nEnter a temperature in Farenheit\n=> ");
+//             scanf("%f", &temp);
+//             result = (float) (temp - 32) * 5/9;
+//             printf("\n %.2f degrees Celsius", result);
+//             break;
+//     }
 
-    return 0;
+//     return 0;
 
-}
+// }
 
 // int main(){
 //     int num1;
@@ -72,26 +72,40 @@ int main(){
 //     return 0;
 // }
 
-// int main(){
-//     int num;
+int main(){
+    int num;
+    int n;
+    int isPrime = 1;
 
-//     printf("Enter a number to check if it is positive, negative, even, and or odd\n=> ");
-//     scanf("%d", &num);
+    printf("Enter a number to check if it is positive, negative, even, and or odd\n=> ");
+    scanf("%d", &num);
 
-//     if(num < 0){
-//         printf("The number is negative");
-//     }else{
-//         printf("The number is positive");
-//     }
+    if(num < 0){
+        printf("The number is negative");
+    }else{
+        printf("The number is positive");
+    }
 
-//     if(num % 2 == 0){
-//         printf(" and is an even number");
-//     }else{
-//         printf(" and is an odd number");
-//     }
+    if(num % 2 == 0){
+        printf(" and is an even number");
+    }else{
+        printf(" and is an odd number");
+    }
 
-//     return 0;
-// }
+    for(n = 2; n <= num / 2; n++){
+        if(num % n == 0){
+            isPrime = 0;
+        }
+    }
+
+    if(!isPrime){
+        printf(" %d is not a prime number", num);
+    }else{
+        printf(" %d is a prime number", num);
+    }
+
+    return 0;
+}
 
 // int main(){
 //     int age;
