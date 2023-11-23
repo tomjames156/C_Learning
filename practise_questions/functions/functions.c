@@ -8,13 +8,13 @@ int square(int num){
 
 int factorial(int num);
 
-int factorial(int num){
-    if(num > 1){
-        return num * factorial(num - 1);
-    }else{
-        return 1;
-    }
-}
+// int factorial(int num){
+//     if(num > 1){
+//         return num * factorial(num - 1);
+//     }else{
+//         return 1;
+//     }
+// }
 
 int fib(int num1, int num2, int len){
     if(len > 0){
@@ -113,6 +113,12 @@ void numbersInRange(int start, int stop){
 	}
 }
 
+void isPrime(int num);
+
+int factorial(int num);
+
+void fibonnaci(int num1, int num2, int length, int length2);
+
 int main(){
     printf("%d", square(60));
     printf("%d", factorial(5));
@@ -120,7 +126,50 @@ int main(){
     printf("1 3 ");
     fib(1, 3, 3);
     // fave(0);
-    // printf("%d", max());
+    // printf("%d", max())
+    fibonnaci(3, 5, 6, 6);
+    isPrime(9);
     numbersInRange(1, 20);
+    printf("\n%d", factorial(3));
     return 0;
+}
+
+void isPrime(int num){
+    int i;
+    int primeNum = 1;
+
+    for(i = 0; i <= num / 2; i++){
+        if(num % i == 0){
+            primeNum = 0;
+        }
+    }
+
+    if(!primeNum){
+        printf("\n%d is not a prime number", num);
+    }else{
+        printf("\n%d is a prime number", num);
+    }
+}
+
+int factorial(int num){
+    if(num > 1){
+        return num * factorial(num -1);
+    }else{
+        return 1;
+    }
+}
+
+void fibonnaci(int num1, int num2, int length, int length2){
+    int sum = num1 + num2;
+    if(length == length2){
+        printf("\n%d + %d", num1, num2);
+    }
+    if(length - 2 >= 1){
+        length--;
+        printf(" + %d", sum);
+        fibonnaci(num2, sum, length, length2);
+    }else{
+        printf(".");
+    }
+
 }
