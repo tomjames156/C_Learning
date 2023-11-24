@@ -66,26 +66,26 @@ int positiveNos(int numbers[20]);
 int negativeNos(int numbers[20]);
 int zeros(int numbers[20]);
 
-int main(){
-    int i = 0;
-    int numbers[20];
+// int main(){
+//     int i = 0;
+//     int numbers[20];
 
-    printf("Enter 20 numbers to check which of them are even, odd, positive, negative or zero");
+//     printf("Enter 20 numbers to check which of them are even, odd, positive, negative or zero");
 
-    while(i < 20){
-        printf("\nNum: ");
-        scanf("%d", &numbers[i]);
-        i++;
-    }
+//     while(i < 20){
+//         printf("\nNum: ");
+//         scanf("%d", &numbers[i]);
+//         i++;
+//     }
 
-    printf("You entered %d even numbers, ", evenNos(numbers));
-    printf("%d odd numbers, ", oddNos(numbers));
-    printf("%d positive numbers, ", positiveNos(numbers));
-    printf("%d negative numbers, ", negativeNos(numbers));
-    printf("and %d zeros", zeros(numbers));
+//     printf("You entered %d even numbers, ", evenNos(numbers));
+//     printf("%d odd numbers, ", oddNos(numbers));
+//     printf("%d positive numbers, ", positiveNos(numbers));
+//     printf("%d negative numbers, ", negativeNos(numbers));
+//     printf("and %d zeros", zeros(numbers));
 
-    return 0;
-}
+//     return 0;
+// }
 
 int positiveNos(int numbers[20]){
     int i;
@@ -124,4 +124,53 @@ int zeros(int numbers[20]){
     }
 
     return counter;
+}
+
+int main(){
+
+    int num1;
+    int num2;
+    char operation;
+    int result;
+    float division;
+
+    printf("Calculator program");
+    printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
+
+    printf("\nOperand: ");
+    scanf("%c", &operation);
+
+    printf("\n1st Number: ");
+    scanf("%d", &num1);
+
+    printf("\n2nd Number: ");
+    scanf("%d", &num2);
+
+    switch(operation){
+        case '+':
+            result = num1 + num2;
+            printf("%d + %d = %d", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%d - %d = %d", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%d X %d = %d", num1, num2, result);
+            break;
+        case '%':
+            result = num1 % num2;
+            printf("%d (mod %d) = %d", num1, num2, result);
+            break;
+        case '/':
+            division = (float) num1 / num2;
+            printf("%d / %d = %.2f", num1, num2, division);
+            break;
+        default:
+            printf("Invalid Operation");
+            break;
+    }
+
+    return 0;
 }
