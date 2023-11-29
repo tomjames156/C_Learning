@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+float calculatePurchase();
+int evenSum();
+
 // int main(){
 
 //     int streetAddress;
@@ -67,22 +70,41 @@ int negativeNos(int numbers[20]);
 int zeros(int numbers[20]);
 
 // int main(){
-//     int i = 0;
+//     int i;
 //     int numbers[20];
+//     int positive, negative, even, odd, zero;
+//     positive = negative = even = odd = zero = 0;
 
 //     printf("Enter 20 numbers to check which of them are even, odd, positive, negative or zero");
 
-//     while(i < 20){
-//         printf("\nNum: ");
+//     for(i = 0; i < 20; i++){
+//         printf("\nNum %d: ", i + 1);
 //         scanf("%d", &numbers[i]);
-//         i++;
 //     }
 
-//     printf("You entered %d even numbers, ", evenNos(numbers));
-//     printf("%d odd numbers, ", oddNos(numbers));
-//     printf("%d positive numbers, ", positiveNos(numbers));
-//     printf("%d negative numbers, ", negativeNos(numbers));
-//     printf("and %d zeros", zeros(numbers));
+//     for(i = 0; i < 20; i++){
+//         if(numbers[i] % 2 == 0){
+//             even++;
+//         }else{
+//             odd++;
+//         }
+
+//         if(numbers[i] > 0){
+//             positive++;
+//         }else if(numbers[i] < 0){
+//             negative++;
+//         }else{
+//             zero++;
+//         }
+//     }
+
+
+
+//     printf("Out of the 20 numbers, %d are even numbers, ", even);
+//     printf("are %d odd numbers, ", odd);
+//     printf("are %d positive numbers, ", positive);
+//     printf("are %d negative numbers, ", negative);
+//     printf("and are %d zero", zeros(numbers));
 
 //     return 0;
 // }
@@ -126,51 +148,105 @@ int zeros(int numbers[20]){
     return counter;
 }
 
-int main(){
+// int main(){
 
-    int num1;
-    int num2;
-    char operation;
-    int result;
-    float division;
+//     int num1;
+//     int num2;
+//     char operation;
+//     int result;
+//     float division;
 
-    printf("Calculator program");
-    printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
+//     printf("Calculator program");
+//     printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
 
-    printf("\nOperand: ");
-    scanf("%c", &operation);
+//     printf("\nOperand: ");
+//     scanf("%c", &operation);
 
-    printf("\n1st Number: ");
-    scanf("%d", &num1);
+//     printf("\n1st Number: ");
+//     scanf("%d", &num1);
 
-    printf("\n2nd Number: ");
-    scanf("%d", &num2);
+//     printf("\n2nd Number: ");
+//     scanf("%d", &num2);
 
-    switch(operation){
-        case '+':
-            result = num1 + num2;
-            printf("%d + %d = %d", num1, num2, result);
+//     switch(operation){
+//         case '+':
+//             result = num1 + num2;
+//             printf("%d + %d = %d", num1, num2, result);
+//             break;
+//         case '-':
+//             result = num1 - num2;
+//             printf("%d - %d = %d", num1, num2, result);
+//             break;
+//         case '*':
+//             result = num1 * num2;
+//             printf("%d X %d = %d", num1, num2, result);
+//             break;
+//         case '%':
+//             result = num1 % num2;
+//             printf("%d (mod %d) = %d", num1, num2, result);
+//             break;
+//         case '/':
+//             division = (float) num1 / num2;
+//             printf("%d / %d = %.2f", num1, num2, division);
+//             break;
+//         default:
+//             printf("Invalid Operation");
+//             break;
+//     }
+
+//     return 0;
+// }
+
+float calculatePurchase(){
+    float cost;
+    int num;
+    float total = 0;
+    float discount;
+    
+    printf("A program that calculates the total cost of your purchase.\nEnter 0 to end the program");
+    
+    while(1){
+        printf("\nPrice: ");
+        scanf("%f", &cost);
+        if(cost == 0){
             break;
-        case '-':
-            result = num1 - num2;
-            printf("%d - %d = %d", num1, num2, result);
+        }
+
+        printf("\nNumber of Item: ");
+        scanf("%d", &num);
+        if(num == 0){
             break;
-        case '*':
-            result = num1 * num2;
-            printf("%d X %d = %d", num1, num2, result);
-            break;
-        case '%':
-            result = num1 % num2;
-            printf("%d (mod %d) = %d", num1, num2, result);
-            break;
-        case '/':
-            division = (float) num1 / num2;
-            printf("%d / %d = %.2f", num1, num2, division);
-            break;
-        default:
-            printf("Invalid Operation");
-            break;
+        }
+
+        total += (float) cost * num;
     }
 
+    if(total > 1000){
+        discount = (float) total * 0.1;
+        total = (float) total - discount;
+        printf("You got a 10%% discount on your purchase");
+    }
+
+    return total;
+}
+
+int main(){
+    float total = calculatePurchase();
+    printf("The total purchase $%.2f", total);
+    printf("\nSum of even numbers from 1 to 20 is %d", evenSum());
+
     return 0;
+}
+
+int evenSum(){
+    int i;
+    int total = 0;
+
+    for(i = 1; i <= 20; i++){
+        if(i % 2 == 0){
+            total += i;
+        }
+    }
+
+    return total;
 }
