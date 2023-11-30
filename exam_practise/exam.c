@@ -3,6 +3,8 @@
 float calculatePurchase();
 int evenSum();
 
+int factorial(int num);
+
 // int main(){
 
 //     int streetAddress;
@@ -36,6 +38,10 @@ int evenSum();
 // }
 
 int evenNos(int numbers[20]);
+
+void evenOddNumbers(int start, int stop);
+
+void fibonacci(int num1, int num2, int len);
 
 int evenNos(int numbers[20]){
     int i;
@@ -148,54 +154,62 @@ int zeros(int numbers[20]){
     return counter;
 }
 
-// int main(){
+int main(){
 
-//     int num1;
-//     int num2;
-//     char operation;
-//     int result;
-//     float division;
+    int num1;
+    int num2;
+    char operation;
+    int result;
+    float division;
 
-//     printf("Calculator program");
-//     printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
+    printf("Calculator program");
+    printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
 
-//     printf("\nOperand: ");
-//     scanf("%c", &operation);
+    printf("\nOperand: ");
+    scanf("%c", &operation);
 
-//     printf("\n1st Number: ");
-//     scanf("%d", &num1);
+    printf("\n1st Number: ");
+    scanf("%d", &num1);
 
-//     printf("\n2nd Number: ");
-//     scanf("%d", &num2);
+    printf("\n2nd Number: ");
+    scanf("%d", &num2);
 
-//     switch(operation){
-//         case '+':
-//             result = num1 + num2;
-//             printf("%d + %d = %d", num1, num2, result);
-//             break;
-//         case '-':
-//             result = num1 - num2;
-//             printf("%d - %d = %d", num1, num2, result);
-//             break;
-//         case '*':
-//             result = num1 * num2;
-//             printf("%d X %d = %d", num1, num2, result);
-//             break;
-//         case '%':
-//             result = num1 % num2;
-//             printf("%d (mod %d) = %d", num1, num2, result);
-//             break;
-//         case '/':
-//             division = (float) num1 / num2;
-//             printf("%d / %d = %.2f", num1, num2, division);
-//             break;
-//         default:
-//             printf("Invalid Operation");
-//             break;
-//     }
+    switch(operation){
+        case '+':
+            result = num1 + num2;
+            printf("%d + %d = %d", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%d - %d = %d", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%d X %d = %d", num1, num2, result);
+            break;
+        case '%':
+            result = num1 % num2;
+            printf("%d (mod %d) = %d", num1, num2, result);
+            break;
+        case '/':
+            division = (float) num1 / num2;
+            printf("%d / %d = %.2f", num1, num2, division);
+            break;
+        default:
+            printf("Invalid Operation");
+            break;
+    }
 
-//     return 0;
-// }
+    return 0;
+}
+
+int factorial(int num){
+    if(num > 1){
+        return num * factorial(num - 1);
+    }else{
+        return 1;
+    }
+}
 
 float calculatePurchase(){
     float cost;
@@ -230,13 +244,18 @@ float calculatePurchase(){
     return total;
 }
 
-int main(){
-    float total = calculatePurchase();
-    printf("The total purchase $%.2f", total);
-    printf("\nSum of even numbers from 1 to 20 is %d", evenSum());
+// int main(){
+//     // float total = calculatePurchase();
+//     // printf("The total purchase $%.2f", total);
+//     // printf("\nSum of even numbers from 1 to 20 is %d", evenSum());
+//     evenOddNumbers(1, 20);
+//     printf("\n3! = %d", factorial(3));
+//     printf("\nFibonacci series: 3 + 5");
+//     fibonacci(3, 5, 2);
+//     printf(" + ...");
 
-    return 0;
-}
+//     return 0;
+// }
 
 int evenSum(){
     int i;
@@ -249,4 +268,30 @@ int evenSum(){
     }
 
     return total;
+}
+
+void evenOddNumbers(int start, int stop){
+    int i;
+    printf("Even numbers between %d and %d:", start, stop);
+    for(i = start; i <= stop; i++){
+        if(i % 2 == 0){
+            printf(" %d,", i);
+        }
+    }
+
+    printf("\nOdd Numbers between %d and %d:", start, stop);
+    for(i = start; i <= stop; i++){
+        if(i % 2 == 1){
+            printf(" %d,", i);
+        }
+    }
+}
+
+void fibonacci(int num1, int num2, int len){
+    if(len - 2 > 0){
+        int result = num1 + num2;
+        len--;
+        printf(" + %d", result);
+        fibonacci(num2, result, len);
+    }
 }
