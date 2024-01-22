@@ -37,6 +37,22 @@ void division(int a, int b){
     printf("\nDivision = %.2f\n", answer);
 }
 
+void greet(){
+    printf("Hey! How are you doing?");
+}
+
+int main(){
+    char introduction[] = "I am Daenerys Stormborn, Breaker of Chains, Mother of Dragons e.t.c";
+    char fullName[] = {'D', 'a', 'n', 'y', ' ', 'T', 'a', 'r', 'g', 's', '\0'};
+
+
+    printf("%s", introduction);
+    printf(" or %s for short\n", fullName);
+    greet();
+    printf("\n");
+    return 0;
+}
+
 // int main(){
 //     printf("***CALCULATOR***\nEnter an operation you would like to carry out;\nOptions:\n'A' - Add\n'S' - Subtraction\n'D' - Division\n'M' - Multiplication\n\n=> ");
 //     char operation;
