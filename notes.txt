@@ -19,3 +19,16 @@ Operators; arithmetic, assignment, bitwise, comparison, logical
 increment operator can be used before or after the variable 
 
 ^ (X0R), << (left shift), >> (right shift), & (and), | (or)
+
+
+Strings are a sequence of characters terminated by a null terminator at the end \0
+So basically a string with 5 characters actually takes up 6 spaces in the memory because of the extra \0 character. Strings are always enclosed in double quotes.
+
+char name[no] = "String";
+and they are accessed using %s
+
+The assignment operator can only be used on strings when declaring the string. Strings can still be assigned values by scanf
+
+NOTE:
+1. In C now you have to declare the number of characters for the string first if you're not going to assign the value immediately
+2. The & reference operator for assigning to a var is unnecessary allow
