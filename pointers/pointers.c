@@ -18,5 +18,9 @@ int main(){
     x = *z;
 
     printf("%f %f\n", y, x);
+
+    *z = 9;
+    printf("%f %f\n", y, x);
+    
     return 0;
 }
