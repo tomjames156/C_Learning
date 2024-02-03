@@ -29,17 +29,17 @@ So basically a string with 5 characters actually takes up 6 spaces in the memory
 char name[no] = "String";
 and they are accessed using %s
 
-The assignment operator can only be used on strings when declaring the string. Strings can still be assigned values by scanf
+The assignment operator can only be used on strings when declaring the string. Strings can still be assigned values by scanf. However, scanf reads the string until it encounters some whitespace e.g space, linebreak etc
 
 gets() and puts() are used to assign a value to a string and display a string value respectively.
-fgets() reads an entire line of a string and it requires 3 args fgets(stringVarName, strlength, stdin)
+fgets() and gets() can read an entire line of a string and it requires 3 args fgets(stringVarName, strlength, stdin)
 stdin (Standard Input) is a file pointer in c. It's a stream from which the program reads input
 
 You can pass strings as arguments to a function. Just declare the function and indicate that a string would be passed there.
 
 Manipulating strings can be done using string.h library which has functions for string manipulation. 
 strcat(dest, source) - (String Concatenation) adds 2 strings together, 
-strlen(str) - gets string length without the null terminator. the output is an unsigned integer referenced with "%zu", 
+strlen(str) - gets string length without the null terminator. the output is an unsigned integer referenced with "%zu" z- length modifier and u- unsigned type, 
 strcpy(dest, source)-(copies the string and its null terminator)
 strcmp(str1, str2) - compares 2 strings to see if they are the same. If the same returns 0, else returns a different value.
 
@@ -77,6 +77,6 @@ NOTE:
 3. gets() is actually an unsafe function because it allows the user to input any number of chars hence causing a buffer overflow
 4. the length of string you use in fgets() should be the actual length of the string + 1;
 5. When getting char or string input leave a space before the quotes to avoid getting errors.
-6. fgets() always adds some linebreak after the text.
+6. fgets() always adds some linebreak after the text while gets() does not.
 7. %.nf always approximates to the nearest figure based on equal to >= 5
 8. to directly give a struct values, you need to declare the whole struct variable like so: struct structName varName = {member1, member2}
