@@ -29,6 +29,21 @@ and they are accessed using %s
 
 The assignment operator can only be used on strings when declaring the string. Strings can still be assigned values by scanf
 
+gets() and puts() are used to assign a value to a string and display a string value respectively.
+fgets() reads an entire line of a string and it requires 3 args fgets(stringVarName, strlength, stdin)
+stdin (Standard Input) is a file pointer in c. It's a stream from which the program reads input
+
+You can pass strings as arguments to a function. Just declare the function and indicate that a string would be passed there.
+
+Manipulating strings can be done using string.h library which has functions for string manipulation. 
+strcat(dest, source) - (String Concatenation) adds 2 strings together, 
+strlen(str) - gets string length without the null terminator. the output is an unsigned integer referenced with "%zu", 
+strcpy(dest, source)-(copies the string and its null terminator)
+strcmp(str1, str2) - compares 2 strings to see if they are the same. If the same returns 0, else returns a different value.
+
+
 NOTE:
 1. In C now you have to declare the number of characters for the string first if you're not going to assign the value immediately
-2. The & reference operator for assigning to a var is unnecessary allow
+2. The & reference operator for assigning to a var in scanf is unnecessary for strings.
+3. gets() is actually an unsafe function because it allows the user to input any number of chars hence causing a buffer overflow
+4. the length of string you use in fgets() should be the actual length of the string + 1;
