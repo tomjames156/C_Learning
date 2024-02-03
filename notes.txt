@@ -21,6 +21,8 @@ increment operator can be used before or after the variable
 ^ (X0R), << (left shift), >> (right shift), & (and), | (or)
 
 
+STRINGS
+
 Strings are a sequence of characters terminated by a null terminator at the end \0
 So basically a string with 5 characters actually takes up 6 spaces in the memory because of the extra \0 character. Strings are always enclosed in double quotes.
 
@@ -42,8 +44,39 @@ strcpy(dest, source)-(copies the string and its null terminator)
 strcmp(str1, str2) - compares 2 strings to see if they are the same. If the same returns 0, else returns a different value.
 
 
+STRUCTURES
+
+Structure is a collection of multiple variables of possibly dissimilar data types stored under a single variable name. In C and C++. Its similar to a class in Java and C++ but without methods. 
+
+The variables stored in the struct are called members and are similar to a field of a class in Java.
+
+struct structName{
+    dataType varname; (member)
+    dataType varname;
+    dataType varname;
+};
+
+Struct variables can be declared by the side of the struct declaration before the semicolon using;
+struct structName struct1, struct2, struct3;
+
+Structure variables are accessed using dot notation
+
+Structure variables can be assigned values with the assignment operator and curly braces which contain the members in order e.g
+
+struct coordinate{
+    float x;
+    float y;
+};
+
+struct coordinate home = {13, 13};
+
+
 NOTE:
 1. In C now you have to declare the number of characters for the string first if you're not going to assign the value immediately
 2. The & reference operator for assigning to a var in scanf is unnecessary for strings.
 3. gets() is actually an unsafe function because it allows the user to input any number of chars hence causing a buffer overflow
 4. the length of string you use in fgets() should be the actual length of the string + 1;
+5. When getting char or string input leave a space before the quotes to avoid getting errors.
+6. fgets() always adds some linebreak after the text.
+7. %.nf always approximates to the nearest figure based on equal to >= 5
+8. to directly give a struct values, you need to declare the whole struct variable like so: struct structName varName = {member1, member2}
