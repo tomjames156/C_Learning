@@ -125,29 +125,41 @@
 int main(){
     char fullName[30];
 
+    struct hostel{
+        char hostelName[30];
+        int roomNumber;
+    };
+
     struct friend{
         char name[50];
+        struct hostel hostel;
         int age;
         char department[30];
         char city[10];
-    } friends[5];
+    } friends[3];
 
     // struct friend friends[5];
 
-    // for(int i = 0; i < 5; i++){
+    // for(int i = 0; i < 3; i++){
     //     printf("Enter info about your friend in the order;\nName:\nAge:\nDepartment:\nCity:\n");
     //     scanf(" %s%i%s%s", friends[i].name, &friends[i].age, friends[i].department, friends[i].city);
     // }
 
-    printf("Enter your name below: ");
-    // scanf("%s", fullName);
-    // gets(fullName);
-    fgets(fullName, 30, stdin);
-    printf("Hi I'm %s and these are my friends", fullName);
+    // printf("Enter your name below: ");
+    // // scanf("%s", fullName);
+    // // gets(fullName);
+    // fgets(fullName, 30, stdin);
+    // printf("\nHi I'm %s and these are my friends", fullName);
 
-    // for(int i = 0; i < 5; i++){
+    // for(int i = 0; i < 3; i++){
     //     printf("\n%s is %i years old from %s and studies %s", friends[i].name, friends[i].age, friends[i].city, friends[i].department);
     // }
+
+    struct friend chuks = {"Chukwudubem", {"Blue Nile", 312}, 19, "Software Engineering", "P.H"};
+    struct friend reyd = {"Fareyd", {"Blue Nile", 224}, 19, "Computer Science", "Abuja"};
+
+    printf("\nMy friend %s is %i years old from %s and studies %s. You can find him in %s Room %i", chuks.name, chuks.age, chuks.city, chuks.department, chuks.hostel.hostelName, chuks.hostel.roomNumber);
+    printf("\nMy friend %s is %i years old from %s and studies %s. You can find him in %s Room %i", reyd.name, reyd.age, reyd.city, reyd.department, reyd.hostel.hostelName, reyd.hostel.roomNumber);
 
     return 0;
 }

@@ -70,6 +70,7 @@ struct coordinate{
 
 struct coordinate home = {13, 13};
 
+you can have an array of structure just declare it in the same way you declare struct variables but with the square brackets and the number of struct vars to be declared e.g struct book books[10] i.e 10 struct variables which are books.
 
 NOTE:
 1. In C now you have to declare the number of characters for the string first if you're not going to assign the value immediately
