@@ -72,6 +72,17 @@ struct coordinate home = {13, 13};
 
 you can have an array of structure just declare it in the same way you declare struct variables but with the square brackets and the number of struct vars to be declared e.g struct book books[10] i.e 10 struct variables which are books.
 
+POINTERS:
+Pointers are variables that store memory addresses of variables that hold values.
+Pointers are also variables and they require the data type of the variable they will be holding it's memory address. Pointers are declared with the datatype first and *variable name e.g:
+
+int *agePointer or int* agePointer;
+Pointers are referenced in printf using "%p". 
+A variables pointer value is accessed by using &variable
+To get the value stored in the memory address in a pointer, you use the '*' (dereference) operator. The * operator on the pointer can be used to reference and update the variable same way the pointer can be used in scanf instead of &variableName.
+
+
+
 NOTE:
 1. In C now you have to declare the number of characters for the string first if you're not going to assign the value immediately
 2. The & reference operator for assigning to a var in scanf is unnecessary for strings.

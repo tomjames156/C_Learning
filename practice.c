@@ -203,32 +203,89 @@ like JavaScript comments 😂 */
 //     return 0;
 // }
 
-int main(){
-    printf("Outfit Picker.\nDescribe how you're feeling and I'll recommend an outfit colour for you\n");
-    printf("Options are:\n1 - Moody\n2 - Sad\n3 - Happy\n4 - Angry\n5 - Relaxed\n\n=> ");
-    int todays_mood;
-    scanf("%d", &todays_mood);
+// int main(){
+//     printf("Outfit Picker.\nDescribe how you're feeling and I'll recommend an outfit colour for you\n");
+//     printf("Options are:\n1 - Moody\n2 - Sad\n3 - Happy\n4 - Angry\n5 - Relaxed\n\n=> ");
+//     int todays_mood;
+//     scanf("%d", &todays_mood);
 
-    switch(todays_mood){
-        case 1:
-            printf("PURPLE is great for when you feel a bit moody.");
-            break;
-        case 2:
-            printf("Go with GRAY for a sad boy/girl aesthetic.");
-            break;
-        case 3:
-            printf("Sparkle in WHITE for happiness but keep it clean.");
-            break;
-        case 4:
-            printf("Looks like you're going RED with anger");
-            break;
-        case 5:
-            printf("Be on with nature and relax in GREEN");
-            break;
-        default:
-            printf("You can never go wrong with all BLACK");
-            break;
-    }
+//     switch(todays_mood){
+//         case 1:
+//             printf("PURPLE is great for when you feel a bit moody.");
+//             break;
+//         case 2:
+//             printf("Go with GRAY for a sad boy/girl aesthetic.");
+//             break;
+//         case 3:
+//             printf("Sparkle in WHITE for happiness but keep it clean.");
+//             break;
+//         case 4:
+//             printf("Looks like you're going RED with anger");
+//             break;
+//         case 5:
+//             printf("Be on with nature and relax in GREEN");
+//             break;
+//         default:
+//             printf("You can never go wrong with all BLACK");
+//             break;
+//     }
+
+//     return 0;
+// }
+
+
+// C Program to check for prime number using Simple Approach 
+#include <stdio.h> 
+  
+// Function to check prime number 
+void checkPrime(int N) 
+{ 
+    // initially, flag is set to true or 1 
+    int flag = 1; 
+  
+    // loop to iterate through 2 to N/2 
+    for (int i = 2; i <= N / 2; i++) { 
+  
+        // if N is perfectly divisible by i 
+        // flag is set to 0 i.e false 
+        if (N % i == 0) { 
+            flag = 0; 
+            break; 
+        } 
+    } 
+  
+    if (flag) { 
+        printf("The number %d is a Prime Number\n", N); 
+    } 
+    else { 
+        printf("The number %d is not a Prime Number\n", N); 
+    } 
+  
+    return; 
+} 
+
+
+
+int main(){
+    // int num1 = 3, num2 = 5;
+    int num1, num2;
+    // int myNum, flag = 1;
+    long largeNum = 1500000000;
+
+    // printf("%d + %d = %d", num1, num2, num1 + num2);
+    // printf("Enter the first number\n : ");
+    // scanf("%d", &num1);
+
+    // printf("Enter the second number\n : ");
+    // scanf("%d", &num2);
+
+    // printf("%d + %d = %d", num1, num2, num1 + num2);
+
+    // printf("Enter a number to check if its a prime number : ");
+    // scanf("%d", &myNum);
+
+    printf("%ld", largeNum * 2);
+
 
     return 0;
 }

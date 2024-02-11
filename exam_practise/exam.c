@@ -154,54 +154,54 @@ int zeros(int numbers[20]){
     return counter;
 }
 
-int main(){
+// int main(){
 
-    int num1;
-    int num2;
-    char operation;
-    int result;
-    float division;
+//     int num1;
+//     int num2;
+//     char operation;
+//     int result;
+//     float division;
 
-    printf("Calculator program");
-    printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
+//     printf("Calculator program");
+//     printf("\nEnter two whole numbers and then an operand like + (addition), - (subtraction), * (multiplication), / (division), %% (modulus)");
 
-    printf("\nOperand: ");
-    scanf("%c", &operation);
+//     printf("\nOperand: ");
+//     scanf("%c", &operation);
 
-    printf("\n1st Number: ");
-    scanf("%d", &num1);
+//     printf("\n1st Number: ");
+//     scanf("%d", &num1);
 
-    printf("\n2nd Number: ");
-    scanf("%d", &num2);
+//     printf("\n2nd Number: ");
+//     scanf("%d", &num2);
 
-    switch(operation){
-        case '+':
-            result = num1 + num2;
-            printf("%d + %d = %d", num1, num2, result);
-            break;
-        case '-':
-            result = num1 - num2;
-            printf("%d - %d = %d", num1, num2, result);
-            break;
-        case '*':
-            result = num1 * num2;
-            printf("%d X %d = %d", num1, num2, result);
-            break;
-        case '%':
-            result = num1 % num2;
-            printf("%d (mod %d) = %d", num1, num2, result);
-            break;
-        case '/':
-            division = (float) num1 / num2;
-            printf("%d / %d = %.2f", num1, num2, division);
-            break;
-        default:
-            printf("Invalid Operation");
-            break;
-    }
+//     switch(operation){
+//         case '+':
+//             result = num1 + num2;
+//             printf("%d + %d = %d", num1, num2, result);
+//             break;
+//         case '-':
+//             result = num1 - num2;
+//             printf("%d - %d = %d", num1, num2, result);
+//             break;
+//         case '*':
+//             result = num1 * num2;
+//             printf("%d X %d = %d", num1, num2, result);
+//             break;
+//         case '%':
+//             result = num1 % num2;
+//             printf("%d (mod %d) = %d", num1, num2, result);
+//             break;
+//         case '/':
+//             division = (float) num1 / num2;
+//             printf("%d / %d = %.2f", num1, num2, division);
+//             break;
+//         default:
+//             printf("Invalid Operation");
+//             break;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 int factorial(int num){
     if(num > 1){
@@ -294,4 +294,82 @@ void fibonacci(int num1, int num2, int len){
         printf(" + %d", result);
         fibonacci(num2, result, len);
     }
+}
+
+// int main(){
+//     int counter = 0, total = 0, score = 0;
+//     float average = 0;
+
+//     while (counter < 10){
+//         printf("Enter Score %d : ", counter + 1);
+//         scanf("%d", &score);
+//         total += score;
+//         counter++;
+//     }
+
+//     average = (float) total / 10;
+//     printf("\nAverage = %.2f", average);
+
+//     return 0;
+// }
+
+
+
+// int main(){
+//     int total = 0, start = 0, numbers = 0, limit = 0;
+//     // printf("Get the sum of n natural numbers");
+//     printf("\nEnter a number a start number : ");
+    
+//     scanf("%d", &start);
+//     printf("\nEnter the number of numbers to add : ");
+//     scanf("%d", &numbers);
+
+//     printf("%d", start);
+//     total += 2;
+//     for(int i = start + 1; numbers > 1; --numbers){
+//         total += i;
+//         printf(" + %d", i);
+//         i++;
+//     }
+
+//     printf(" = ");
+
+//     printf("%d\n", total);
+
+//     printf("\nEnter a number as the limit : ");
+//     scanf("%d", &limit);
+//     for(int i = 1; i <= limit; i++){
+//         if(i % 2 == 0){
+//             printf("%d ", i);
+//         }
+//     }
+
+//     do{
+//        printf("Yolo");
+//        numbers++; 
+//        if(numbers == 4){
+//         break;
+//        }
+//     }while(numbers < 5);
+
+//     for(int x = 0; x < 4; x++){
+//         printf("\n");
+//         for(int y = 0; y < 4; y++){
+//             printf("%d", y);
+//         }
+//     }
+
+//     printf("\n5! = %d", factorial(5));
+
+//     return 0;
+// }
+
+
+int main(){
+    int a = 3, b;
+    printf("a = %d", a);
+    b = a++;
+
+    printf("\n\na = %d\nb = %d", a, b);
+    return 0;
 }
