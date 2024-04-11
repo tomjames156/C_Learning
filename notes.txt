@@ -81,7 +81,14 @@ Pointers are referenced in printf using "%p".
 A variables pointer value is accessed by using &variable
 To get the value stored in the memory address in a pointer, you use the '*' (dereference) operator. The * operator on the pointer can be used to reference and update the variable same way the pointer can be used in scanf instead of &variableName.
 
+goTo keyworrd is used like
+goto greet;
 
+greet: {
+    printf("Good morning");
+}
+
+There is function declaration and definition. Declaration tells the compiler about the functions name, return value and params while the function definition defines the actual body of the function.
 
 NOTE:
 1. In C now you have to declare the number of characters for the string first if you're not going to assign the value immediately
@@ -92,3 +99,5 @@ NOTE:
 6. fgets() always adds some linebreak after the text while gets() does not.
 7. %.nf always approximates to the nearest figure based on equal to >= 5
 8. to directly give a struct values, you need to declare the whole struct variable like so: struct structName varName = {member1, member2}
+9. No need to have a break statement after default case because the switch statement ends there. It won't execute the default block regardless of if there's no break statement there as long as there are break statements for other cases.
+10. Avoid using the goto keyword because it makes C programs unpredictable

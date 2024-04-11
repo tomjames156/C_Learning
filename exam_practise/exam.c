@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 float calculatePurchase();
 int evenSum();
@@ -365,11 +366,78 @@ void fibonacci(int num1, int num2, int len){
 // }
 
 
-int main(){
-    int a = 3, b;
-    printf("a = %d", a);
-    b = a++;
+// int main(){
+//     int a = 3, b;
+//     printf("a = %d", a);
+//     b = a++;
 
-    printf("\n\na = %d\nb = %d", a, b);
+//     printf("\n\na = %d\nb = %d", a, b);
+//     return 0;
+// }
+
+void greet(char name[5]);
+
+int add(float, float);
+
+int diff(int, int);
+
+int showSum(int, int, int);
+
+float fullPay(float, int);
+
+int findMax(int, int, int);
+
+int main(){
+    char name[5] = "Tomi", fullName[10] = "Tomisin";
+    int num1, num2, num3;
+
+    printf("Hello from main function\n");
+    greet(fullName);
+    printf("Hello again from main function\n");
+    printf("4 + 4 = %d", add(4.5, 4.5));
+
+    printf("\n16 - 4 - 4 = %d", diff(16, 8));
+
+    printf("\nEnter 3 numbers to calculate find the largest number\n=> ");
+    scanf("%d%d%d", &num1, &num2, &num3);
+
+    printf("\n%d is the maximum number among the 3 numbers", findMax(num1, num2, num3));
+    
+    printf("\nYour pay for working for 3 hours at $2.5 per hour is $%.2f", fullPay(2.5, 3));
+
     return 0;
+}
+
+void greet(char name[5]){
+    printf("Good day %s\n", name);
+}
+
+int add(float a, float b){
+    return a + b;
+}
+
+int diff(int a, int b){
+    return a - b;
+}
+
+int showSum(int a, int b, int c){
+    return a + b + c;
+}
+
+float fullPay(float payRate, int hoursWorked){
+    return (float) payRate * hoursWorked;
+}
+
+int findMax(int a, int b, int c){
+    int max = a;
+
+    if(b >= max){
+        max = b;
+    }
+
+    if(c >= max){
+        max = c;
+    }
+
+    return max;
 }
