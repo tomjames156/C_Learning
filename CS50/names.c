@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-int len(char arr[]);
-
 int main(){
     char names[5][10] = {"Chad", "Brad", "Jerry", "Brad", "Dekan"};
 
